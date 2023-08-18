@@ -1,0 +1,58 @@
+{
+    "name": "wendelladriel/cache-ttl-helper",
+    "description": "Helper Enum for handling cache TTLs in a simple, easy and friendly way",
+    "type": "library",
+    "keywords": [
+        "cache",
+        "ttl",
+        "helper",
+        "enum"
+    ],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "WendellAdriel\\CacheTtlHelper\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "WendellAdriel\\CacheTtlHelper\\Tests\\": "tests/"
+        }
+    },
+    "support": {
+        "issues": "https://github.com/WendellAdriel/cache-ttl-helper/issues",
+        "source": "https://github.com/WendellAdriel/cache-ttl-helper"
+    },
+    "authors": [
+        {
+            "name": "Wendell Adriel",
+            "email": "wendelladriel.ti@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1"
+    },
+    "require-dev": {
+        "pestphp/pest": "^2.15",
+        "laravel/pint": "^1.11",
+        "phpstan/phpstan": "^1.10"
+    },
+    "scripts": {
+        "lint": "pint",
+        "test:lint": "pint --test",
+        "test:unit": "./vendor/bin/pest --order-by random",
+        "test:static": "phpstan analyse",
+        "test": [
+            "@test:lint",
+            "@test:unit",
+            "@test:static"
+        ]
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
